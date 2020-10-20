@@ -2,10 +2,6 @@
 .terraform
 .env
 
-# get these from s3 in build process
-papaya.css
-papaya.js
-
 # ------------------------------------------------------------------------------------ #
 # ------------------------------------------------------------------------------------ #
 # python gitignore recommended here:
