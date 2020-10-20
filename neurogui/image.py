@@ -37,5 +37,4 @@ def image(image_id):
 		},
 		ExpiresIn=600
 	)
-
-	return render_template('image.html', ImageUrl=image_url)
+	return render_template('image.html', ImageUrl=image_url, ImageId=image_id)

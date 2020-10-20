@@ -67,15 +67,6 @@ def upload_file_to_s3(file, bucket, key):
 
     return s3_uri
 
-def create_image_meta(image_id, **kwargs):
-
-    extension = kwargs.get('extension')
-    return meta_table.put_item(Item={
-        "id" : image_id,
-        "extension" : extension,
-        "status" : "received"
-    })
-
 def stream_keys(bucket, prefix=None, client=None):
 
     client = client or s3

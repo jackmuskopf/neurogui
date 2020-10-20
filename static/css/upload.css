@@ -1,4 +1,8 @@
-
+.loader {
+	 overflow: visible;
+	 margin-top: 1rem;
+	 display: block;
+}
 .container {
 	text-align: center;
 }

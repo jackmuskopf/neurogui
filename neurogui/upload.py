@@ -4,7 +4,7 @@ from flask import Blueprint, render_template, request, \
     redirect, url_for, flash
 from neurogui.settings import settings
 from neurogui.utils import new_id, upload_file_to_s3, \
-    file_too_big, file_size, create_image_meta
+    file_too_big, file_size, meta_table
 
 logger = logging.getLogger(__name__)
 
@@ -51,25 +51,29 @@ def upload_file():
     
     image_id = new_id()
 
-    accepted_extensions = [
-        ".nii.gz",
-        ".nii"
-    ]
+    # accepted_extensions = [
+    #     ".nii.gz",
+    #     ".nii"
+    # ]
 
-    detected_extension = None
-    for ext in accepted_extensions:
-        if file.filename.endswith(ext):
-            logger.info("Detected extension {} for image {}".format(ext, image_id))
-            detected_extension = ext
-            break
+    # detected_extension = None
+    # for ext in accepted_extensions:
+    #     if file.filename.endswith(ext):
+    #         logger.info("Detected extension {} for image {}".format(ext, image_id))
+    #         detected_extension = ext
+    #         break
 
-    if detected_extension is None:
-        logger.info("Failed to detect extension: {}".format(file.filename))
-        return "Did not detect valid extension; accepted extensions: {}".format(", ".join(accepted_extensions))
+    # if detected_extension is None:
+    #     logger.info("Failed to detect extension: {}".format(file.filename))
+    #     return "Did not detect valid extension; accepted extensions: {}".format(", ".join(accepted_extensions))
 
     logger.info("Creating image with id {}".format(image_id))
 
-    create_image_meta(image_id, extension=detected_extension)
+    meta_table.put_item(Item=dict(
+        id=image_id, 
+        filename=file.filename,
+        status='received'
+    ))
 
     output = upload_file_to_s3(
         file=file, 

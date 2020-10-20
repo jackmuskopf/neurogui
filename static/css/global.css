@@ -45,7 +45,7 @@ a {
 /* Links inside the navbar */
 .navbar a {
   float: left;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: white;
   text-align: center;
   padding: 1.17rem 1.3rem;
@@ -60,7 +60,7 @@ a {
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 1.3rem;
+  font-size: 1rem;
   border: none;
   outline: none;
   color: white;
@@ -97,7 +97,8 @@ a {
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: rgb(100,100,0);
+  background-color: rgb(190,190,190);
+  color: black;
 }
 
 /* Show the dropdown menu on hover */
