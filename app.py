@@ -8,7 +8,7 @@ from neurogui import upload, image
 
 logging.basicConfig(
 	# filename='example.log',
-	level=logging.DEBUG,
+	level=getattr(logging, os.environ.get('LOG_LEVEL', 'INFO')),
 	format='{"timestamp":"%(asctime)s", "name":"%(name)s", "level": "%(levelname)s", "message":"%(message)s"}'
 )
 

@@ -1,0 +1,7 @@
+awscli
+boto3
+Flask
+gunicorn
+requests
+python-jose
+urllib3
