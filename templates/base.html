@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--  3rd party css for fonts and icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <!-- (END) 3rd party css -->
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link type="text/css" rel="stylesheet"  href='{{ url_for("static", filename="css/global.css") }}'>
+  <!-- (END) Custom CSS -->
+
+  <title>{% block title %}{% endblock %}</title>
+
+  {% block head %}
+  {% endblock %}
+
+</head>
+
+<body>
+  
+  <div class="navbar">
+    <a href="/">Home</a>
+    <a href="/images">Images</a>
+    <a href="/upload">Upload</a>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+  </div>
+  <main>
+      {% block main %}{% endblock %}
+  </main>
+
+
+  {% block script %}{% endblock %}
+</body>
+
+</html>

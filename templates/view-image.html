@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    	<!-- iOS meta tags -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    	<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+
+        <!-- papaya for in-browser image viewing -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/papaya.css') }}">
+        <script src="{{ url_for('static', filename='js/papaya.js') }}"></script>
+    
+    	<title>View Image</title>
+    
+    	<script type="text/javascript">
+            
+            // papayaContainers[0].viewer.loadBaseImage(["_tests/test-image"], true)
+
+            var params = {};
+            params['images'] = ["{{ ImageUrl|safe }}"];
+
+            // // var $papaya = $("<div>", {"class": "papaya"});
+            // $.ajax({
+            //     contentType: "application/json; charset=utf-8",
+            //     url: '/_tests/test-image',
+            //     method: 'GET',
+            //     dataType : 'json',
+            //     success: function(result) {
+            //         console.log('got image')
+            //         // params["encodedImages"] = [result.base64,];
+            //         papaya.Container.addImage(0, result.base64)
+            //         // $("#papaya-container").html($papaya)
+
+            //     },
+            //    error: function (request, error) {
+            //         console.log("Error " + error);
+            //         $("#papaya-container").html("An error occured:" + error)
+            //     }
+            // });
+        </script>
+
+	</head>
+
+	<body>
+		
+            <div class="papaya" data-params="params"></div>
+		
+		
+	</body>
+</html>

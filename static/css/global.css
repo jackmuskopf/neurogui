@@ -1,0 +1,106 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	overflow: auto;
+}
+
+main {
+}
+
+/*background image from here https://www.artfulmaths.com/mathematical-art-lessons.html*/
+body {
+	background-color: rgb(0,40,88);
+	font-family: "Lucida Console", Courier, monospace;
+	font-weight: 400;
+	font-size: 1rem;
+	color: #fff;
+  background-image: linear-gradient(
+      to right bottom, 
+      rgb(0,0,0,.9), 
+      rgb(0,40,88,.98)
+    ), url( ../img/background.jpg );
+    
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  color: white;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: rgb(80,80,120);
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 1.3rem;
+  color: white;
+  text-align: center;
+  padding: 1.17rem 1.3rem;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1.17rem 1.3rem;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(40,40,40);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(40,40,40);
+  min-width: 13.3rem;
+  box-shadow: 0rem 0.6rem 1.3rem 0rem rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 1rem 1.3rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgb(100,100,0);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}

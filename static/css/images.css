@@ -1,0 +1,32 @@
+
+.container {
+	text-align: center;
+}
+
+.list-box {
+	top: 40%;
+	left: 50%;
+	padding: 2rem;
+	background-color: rgb(0, 0, 10, .8);
+	border-radius: 1rem;
+	font-size: 1.3rem;
+	margin: 2rem;
+	display:inline-block;
+	text-align: left;
+}
+
+.image-list {
+	list-style-type: none;
+}
+
+.image-item {
+	margin: 1rem;
+	/*font-weight: bold;*/
+	color: white;
+}
+
+li.image-item:before {    
+    font-family: 'FontAwesome';
+    content: '\f101';
+    margin:0 5px 0 -15px;
+}

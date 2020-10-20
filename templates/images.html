@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/images.css') }}">
+{% endblock %}
+
+{% block title %}MapNeuro{% endblock %}
+
+{% block main %}
+
+<div class="main-body">
+	<div class='container'>
+		<div class='list-box'>
+			{% if images %}
+				<ul class='image-list'>
+					{% for image in images %}
+						<li class='image-item'><a href="/images/{{ image['id'] }}">{{ image['filename'] }}</a></li>
+					{% endfor %}
+				</ul>
+			{% else %}
+				<p>No images yet.  <a href='/upload'>Upload</a> an image!</p>
+			{% endif %}
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+{% block script %}
+
+{% endblock %}

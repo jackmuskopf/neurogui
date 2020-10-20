@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+{% endblock %}
+
+{% block title %}MapNeuro{% endblock %}
+
+{% block main %}
+
+<div class='container'>
+
+    <div class='upload-box'>
+        <h1>Upload Your Image</h1>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            {% if error_message %}
+                <div color='red'>{{error_message}}</div>
+            {% endif %}
+            <p>Accepted extensions: .nii, .nii.gz</p>
+            <br>
+            <br>
+            <input type="file" class="file-btn" name="user_file" required>
+            <br></br>
+            <input class="upload-btn" type="submit" value="Upload"></button>
+            <!-- <span>No image selected</span> -->
+
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
+{% block script %}
+
+{% endblock %}

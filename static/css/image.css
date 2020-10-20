@@ -1,0 +1,10 @@
+.main-body {
+	display: inline-block;
+	overflow: hidden;
+}
+
+.papaya-container {
+	width: min(140vh - 10rem, 100vw);
+	margin-top: 1rem;
+	margin-left: calc((100vw - min(140vh - 10rem, 100vw))/2);
+}
