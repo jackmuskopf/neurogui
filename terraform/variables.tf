@@ -3,7 +3,7 @@ variable "service_name" {
 }
 
 variable "init_task_count" {
-  default = "0"
+  default = "1"
 }
 
 variable "subnets" {

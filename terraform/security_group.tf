@@ -13,6 +13,6 @@ resource "aws_security_group" "app" {
     from_port   = 5000
     to_port     = 5000
     protocol    = "tcp"
-    cidr_blocks = ["24.107.190.98/32"]
+    cidr_blocks = ["24.107.190.98/32", "71.150.231.202/32"]
   }
 }
